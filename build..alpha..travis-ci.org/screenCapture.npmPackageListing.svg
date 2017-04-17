@@ -1,15 +1,15 @@
 <svg height="190" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="190" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-04 08:02:48 +0000    39870 byte  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-04 08:02:48 +0000     9269 byte  CHANGELOG.md</tspan>
-<tspan x="10" y="58">  2.  2017-04-04 08:02:48 +0000     1060 byte  LICENSE</tspan>
-<tspan x="10" y="74">  3.  2017-04-04 08:02:48 +0000     8096 byte  README.md</tspan>
-<tspan x="10" y="90">  4.  2017-04-04 08:02:48 +0000     4939 byte  lib/index.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-04 08:02:48 +0000     5622 byte  lib/join-arrays-smart.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-04 08:02:48 +0000     2053 byte  lib/join-arrays.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-04 08:02:48 +0000      911 byte  lib/unique.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-04 08:02:48 +0000     4460 byte  lib/unite-rules.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-04 08:02:48 +0000     3460 byte  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-17 16:58:21 +0000    39870 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-17 16:58:21 +0000     9269 bytes  CHANGELOG.md</tspan>
+<tspan x="10" y="58">  2.  2017-04-17 16:58:21 +0000     1060 bytes  LICENSE</tspan>
+<tspan x="10" y="74">  3.  2017-04-17 16:58:21 +0000     8096 bytes  README.md</tspan>
+<tspan x="10" y="90">  4.  2017-04-17 16:58:21 +0000     4939 bytes  lib/index.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-17 16:58:21 +0000     5622 bytes  lib/join-arrays-smart.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-17 16:58:21 +0000     2053 bytes  lib/join-arrays.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-17 16:58:21 +0000      911 bytes  lib/unique.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-17 16:58:21 +0000     4460 bytes  lib/unite-rules.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-17 16:58:21 +0000     3460 bytes  package.json</tspan>
 </text>
 </svg>
