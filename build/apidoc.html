@@ -108,15 +108,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.toString">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.unique">
             function <span class="apidocSignatureSpan">webpack-merge.</span>unique
             <span class="apidocSignatureSpan">(key, uniques)</span>
@@ -173,77 +164,12 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.multiple">module webpack-merge.multiple</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.multiple.multiple">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>multiple
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.smart">module webpack-merge.smart</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.smart.smart">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>smart
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.smartStrategy">module webpack-merge.smartStrategy</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.smartStrategy.smartStrategy">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>smartStrategy
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.strategy">module webpack-merge.strategy</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.strategy.strategy">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>strategy
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.toString">module webpack-merge.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.toString.toString">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.webpack-merge.unique">module webpack-merge.unique</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.unique.unique">
-            function <span class="apidocSignatureSpan">webpack-merge.</span>unique
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-merge.unique.default">
+            function <span class="apidocSignatureSpan">webpack-merge.unique.</span>default
             <span class="apidocSignatureSpan">(key, uniques)</span>
             </a>
 
@@ -318,24 +244,7 @@ sources[0])]));
 
   return (0, _values3.default)(merge(sources));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-loader: &#x27;coffee&#x27;
-  }]
-}
-```
-
-## Multiple Merging
-
-### **`merge.<span class="apidocCodeKeywordSpan">multiple</span>(...configuration | [...configuration])`**
-
-Sometimes you may need to support multiple targets, *webpack-merge* will accept an object where each key represents the target configuration
-. The output becomes an *array* of configurations where matching keys are merged and non-matching keys are added.
-
-```javascript
-var path = require(&#x27;path&#x27;);
-var baseConfig = {
-server: {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -359,23 +268,7 @@ server: {
 
   return _mergeWith3.default.apply(undefined, [{}].concat(structures, [(0, _joinArrays2.default)(sources[0])]));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    &#x27;module.loaders&#x27;: &#x27;prepend&#x27;
-  }
-)(object1, object2, object3, ...);
-```
-
-## Smart Merging
-
-### **`merge.<span class="apidocCodeKeywordSpan">smart</span>(...configuration | [...configuration])`**
-
-*webpack-merge* tries to be smart about merging loaders when `merge.smart` is used. Loaders with matching tests will be merged into
- a single loader value.
-
-Note that the logic picks up webpack 2 `rules` kind of syntax as well. The examples below have been written in webpack 1 syntax.
-
-**package.json**
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -412,24 +305,7 @@ Note that the logic picks up webpack 2 `rules` kind of syntax as well. The examp
     customizeObject: customizeObject(rules)
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-{
-  entry: &#x27;prepend&#x27;, // or &#x27;replace&#x27;, defaults to &#x27;append&#x27;
-  &#x27;module.loaders&#x27;: &#x27;prepend&#x27;
-}
-)(object1, object2, object3, ...);
-```
-
-### **`merge.<span class="apidocCodeKeywordSpan">smartStrategy</span>({ &#x3c;key&#x3e;: &#x27;&#x3c;prepend|append|replace&#x3e
-;&#x27;&#x27;})(...configuration | [...configuration])`**
-
-The same idea works with smart merging too (described below in greater detail).
-
-```javascript
-var output = merge.smartStrategy(
-{
-  entry: &#x27;prepend&#x27;, // or &#x27;replace&#x27;
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -447,38 +323,6 @@ var output = merge.smartStrategy(
     customizeArray: _customizeArray(rules),
     customizeObject: customizeObject(rules)
   });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-});
-
-// Output contains only single HotModuleReplacementPlugin now.
-```
-
-## Merging with Strategies
-
-### **`merge.<span class="apidocCodeKeywordSpan">strategy</span>({ &#x3c;field&#x3e;: &#x27;&#x3c;prepend|append|replace&#x3e;&#
-x27;&#x27;})(...configuration | [...configuration])`**
-
-Given you may want to configure merging behavior per field, there&#x27;s a strategy variant:
-
-```javascript
-// Merging with a specific merge strategy
-var output = merge.strategy(
-{
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.toString" id="apidoc.element.webpack-merge.toString">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -503,23 +347,7 @@ var output = merge.strategy(
     })));
   };
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    // Fall back to default merging
-    return undefined;
-  }
-}
-)(object1, object2, object3, ...);
-```
-
-### **`merge.<span class="apidocCodeKeywordSpan">unique</span>(&#x3c;field&#x3e;, &#x3c;fields&#x3e;, field =&#x3e; field)`**
-
-```javascript
-const output = merge({
-customizeArray: merge.unique(
-  &#x27;plugins&#x27;,
-  [&#x27;HotModuleReplacementPlugin&#x27;],
-  plugin =&#x3e; plugin.constructor &#x26;&#x26; plugin.constructor.name
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -713,216 +541,12 @@ customizeArray: merge.unique(
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.webpack-merge.multiple" id="apidoc.module.webpack-merge.multiple">module webpack-merge.multiple</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.multiple.multiple" id="apidoc.element.webpack-merge.multiple.multiple">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>multiple
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function mergeMultiple() {
-  for (var _len3 = arguments.length, sources = Array(_len3), _key3 = 0; _key3 &#x3c; _len3; _key3++) {
-    sources[_key3] = arguments[_key3];
-  }
-
-  return (0, _values3.default)(merge(sources));
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-loader: &#x27;coffee&#x27;
-  }]
-}
-```
-
-## Multiple Merging
-
-### **`merge.<span class="apidocCodeKeywordSpan">multiple</span>(...configuration | [...configuration])`**
-
-Sometimes you may need to support multiple targets, *webpack-merge* will accept an object where each key represents the target configuration
-. The output becomes an *array* of configurations where matching keys are merged and non-matching keys are added.
-
-```javascript
-var path = require(&#x27;path&#x27;);
-var baseConfig = {
-server: {
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.webpack-merge.smart" id="apidoc.module.webpack-merge.smart">module webpack-merge.smart</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.smart.smart" id="apidoc.element.webpack-merge.smart.smart">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>smart
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">smart = function () {
-  for (var _len2 = arguments.length, structures = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
-    structures[_key2] = arguments[_key2];
-  }
-
-  if (Array.isArray(structures[0])) {
-    return _mergeWith3.default.apply(undefined, [{}].concat(_toConsumableArray(structures[0]), [(0, _joinArrays2.default)(sources
-[0])]));
-  }
-
-  return _mergeWith3.default.apply(undefined, [{}].concat(structures, [(0, _joinArrays2.default)(sources[0])]));
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    &#x27;module.loaders&#x27;: &#x27;prepend&#x27;
-  }
-)(object1, object2, object3, ...);
-```
-
-## Smart Merging
-
-### **`merge.<span class="apidocCodeKeywordSpan">smart</span>(...configuration | [...configuration])`**
-
-*webpack-merge* tries to be smart about merging loaders when `merge.smart` is used. Loaders with matching tests will be merged into
- a single loader value.
-
-Note that the logic picks up webpack 2 `rules` kind of syntax as well. The examples below have been written in webpack 1 syntax.
-
-**package.json**
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.webpack-merge.smartStrategy" id="apidoc.module.webpack-merge.smartStrategy">module webpack-merge.smartStrategy</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.smartStrategy.smartStrategy" id="apidoc.element.webpack-merge.smartStrategy.smartStrategy">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>smartStrategy
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function mergeSmartStrategy() {
-  var rules = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
-  return merge({
-    customizeArray: function customizeArray(a, b, key) {
-      var topKey = key.split(&#x27;.&#x27;).slice(-1)[0];
-
-      if (isRule(topKey)) {
-        switch (rules[key]) {
-          case &#x27;prepend&#x27;:
-            return [].concat(_toConsumableArray((0, _differenceWith3.default)(b, a, function (newRule, seenRule) {
-              return (0, _joinArraysSmart.uniteRules)(rules, key, newRule, seenRule, &#x27;prepend&#x27;);
-            })), _toConsumableArray(a));
-          case &#x27;replace&#x27;:
-            return b;
-          default:
-            // append
-            return (0, _unionWith3.default)(a, b, _joinArraysSmart.uniteRules.bind(null, rules, key));
-        }
-      }
-
-      return _customizeArray(rules)(a, b, key);
-    },
-    customizeObject: customizeObject(rules)
-  });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-{
-  entry: &#x27;prepend&#x27;, // or &#x27;replace&#x27;, defaults to &#x27;append&#x27;
-  &#x27;module.loaders&#x27;: &#x27;prepend&#x27;
-}
-)(object1, object2, object3, ...);
-```
-
-### **`merge.<span class="apidocCodeKeywordSpan">smartStrategy</span>({ &#x3c;key&#x3e;: &#x27;&#x3c;prepend|append|replace&#x3e
-;&#x27;&#x27;})(...configuration | [...configuration])`**
-
-The same idea works with smart merging too (described below in greater detail).
-
-```javascript
-var output = merge.smartStrategy(
-{
-  entry: &#x27;prepend&#x27;, // or &#x27;replace&#x27;
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.webpack-merge.strategy" id="apidoc.module.webpack-merge.strategy">module webpack-merge.strategy</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.strategy.strategy" id="apidoc.element.webpack-merge.strategy.strategy">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>strategy
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function mergeStrategy() {
-  var rules = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
-  return merge({
-    customizeArray: _customizeArray(rules),
-    customizeObject: customizeObject(rules)
-  });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-});
-
-// Output contains only single HotModuleReplacementPlugin now.
-```
-
-## Merging with Strategies
-
-### **`merge.<span class="apidocCodeKeywordSpan">strategy</span>({ &#x3c;field&#x3e;: &#x27;&#x3c;prepend|append|replace&#x3e;&#
-x27;&#x27;})(...configuration | [...configuration])`**
-
-Given you may want to configure merging behavior per field, there&#x27;s a strategy variant:
-
-```javascript
-// Merging with a specific merge strategy
-var output = merge.strategy(
-{
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.webpack-merge.toString" id="apidoc.module.webpack-merge.toString">module webpack-merge.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.webpack-merge.toString.toString" id="apidoc.element.webpack-merge.toString.toString">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.webpack-merge.unique" id="apidoc.module.webpack-merge.unique">module webpack-merge.unique</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.webpack-merge.unique.unique" id="apidoc.element.webpack-merge.unique.unique">
-        function <span class="apidocSignatureSpan">webpack-merge.</span>unique
+        <a href="#apidoc.element.webpack-merge.unique.default" id="apidoc.element.webpack-merge.unique.default">
+        function <span class="apidocSignatureSpan">webpack-merge.unique.</span>default
         <span class="apidocSignatureSpan">(key, uniques)</span>
         </a>
     </h2>
@@ -938,23 +562,7 @@ var output = merge.strategy(
     })));
   };
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    // Fall back to default merging
-    return undefined;
-  }
-}
-)(object1, object2, object3, ...);
-```
-
-### **`merge.<span class="apidocCodeKeywordSpan">unique</span>(&#x3c;field&#x3e;, &#x3c;fields&#x3e;, field =&#x3e; field)`**
-
-```javascript
-const output = merge({
-customizeArray: merge.unique(
-  &#x27;plugins&#x27;,
-  [&#x27;HotModuleReplacementPlugin&#x27;],
-  plugin =&#x3e; plugin.constructor &#x26;&#x26; plugin.constructor.name
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
