@@ -1,4 +1,7 @@
-# api documentation for  [webpack-merge (v4.1.0)](https://github.com/survivejs/webpack-merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-merge)
+# npmdoc-webpack-merge
+
+#### basic api documentation for  [webpack-merge (v4.1.0)](https://github.com/survivejs/webpack-merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-merge)
+
 #### Variant of merge that's useful for webpack configuration
 
 [![NPM](https://nodei.co/npm/webpack-merge.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/webpack-merge)
@@ -103,7 +106,8 @@
                 "tests/**/*.js"
             ]
         }
-    }
+    },
+    "bin": {}
 }
 ```
 
